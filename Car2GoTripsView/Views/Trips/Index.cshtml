@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach( var c in ViewBag.CityTable )
+{
+    <div>
+        @c.Value
+    </div>
+        <img src="StartTest?city=@c.Key&isBegin=true" />
+        <img src="StartTest?city=@c.Key&isBegin=false" />
+    <div>Rides that Start in Ballard</div>
+    <img src="StartTest?city=@c.Key&isBegin=true&maxLat=-122.378833&minLat=-122.394862&minLon=47.662619&maxLon=47.670025" />
+    <img src="StartTest?city=@c.Key&isBegin=false&maxLat=-122.378833&minLat=-122.394862&minLon=47.662619&maxLon=47.670025" />
+    <div>Rides that Start in Cap Hill</div>
+    <img src="StartTest?city=@c.Key&isBegin=true&maxLat=-122.318730&minLat=-122.323880&minLon=47.614104&maxLon=47.624923" />
+    <img src="StartTest?city=@c.Key&isBegin=false&maxLat=-122.318730&minLat=-122.323880&minLon=47.614104&maxLon=47.624923" />
+}

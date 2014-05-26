@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Car2Go">
+  <DataContextMoniker Name="/Car2GoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="ae50ea36-6692-4121-ac93-cee68d6759a7" absoluteBounds="2, 1.125, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/Car2GoDataContext/CityLookup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1bfd956c-668e-49ed-b22d-e7d866c51548" absoluteBounds="2.015, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f552e4c0-ff38-4689-a6bb-0464ac93f7e5" absoluteBounds="1.125, 2.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/Car2GoDataContext/PercentileCoordDate" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7fe7bd20-85d6-44bf-afe8-cabe4b341db2" absoluteBounds="1.1400000000000001, 3.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

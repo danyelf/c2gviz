@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Car2Go" Class="Car2GoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=blackbox\sql2012;Initial Catalog=Car2Go;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="Car2GoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CityLookup" Member="CityLookups">
+    <Type Name="CityLookup">
+      <Column Name="City" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CityIndex" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PercentileCoordDate" Member="PercentileCoordDates">
+    <Type Name="PercentileCoordDate">
+      <Column Name="P90_Lat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P95_Lat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P10_Lat" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="P05_Lat" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="P90_Lon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P95_Lon" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="P10_Lon" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="P05_Lon" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="cityIndex" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.FindTripEnds" Method="FindTripEnds" IsComposable="true">
+    <Parameter Name="TripStart" Parameter="tripStart" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TripEnd" Parameter="tripEnd" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="CityIndex" Parameter="cityIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StartLatMin" Parameter="startLatMin" Type="System.Double" DbType="Float" />
+    <Parameter Name="StartLatMax" Parameter="startLatMax" Type="System.Double" DbType="Float" />
+    <Parameter Name="StartLonMin" Parameter="startLonMin" Type="System.Double" DbType="Float" />
+    <Parameter Name="StartLonMax" Parameter="startLonMax" Type="System.Double" DbType="Float" />
+    <ElementType Name="FindTripEndsResult">
+      <Column Name="COUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Lat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Lon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MinDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AverageDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.FindTripStarts" Method="FindTripStarts" IsComposable="true">
+    <Parameter Name="TripStart" Parameter="tripStart" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="TripEnd" Parameter="tripEnd" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="CityIndex" Parameter="cityIndex" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StartLatMin" Parameter="startLatMin" Type="System.Double" DbType="Float" />
+    <Parameter Name="StartLatMax" Parameter="startLatMax" Type="System.Double" DbType="Float" />
+    <Parameter Name="StartLonMin" Parameter="startLonMin" Type="System.Double" DbType="Float" />
+    <Parameter Name="StartLonMax" Parameter="startLonMax" Type="System.Double" DbType="Float" />
+    <ElementType Name="FindTripStartsResult">
+      <Column Name="COUNT" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Lat" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Lon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MinDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AverageDuration" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>
